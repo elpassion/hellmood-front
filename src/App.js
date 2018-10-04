@@ -8,6 +8,7 @@ import Dashboard from './views/Dashboard';
 import Calendar from './views/Calendar';
 import MoodRating from './views/MoodRating';
 import Settings from './views/Settings';
+import ProtectedRoute from './components/ProtectedRoute';
 
 class App extends Component {
   render() {
@@ -16,10 +17,10 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path={routeMap.login} exact component={Login} />
-          <Route path={routeMap.home} exact component={Dashboard} />
-          <Route path={routeMap.calendar_view} exact component={Calendar} />
-          <Route path={routeMap.rate_your_mood} exact component={MoodRating} />
-          <Route path={routeMap.settings} exact component={Settings} />
+          <ProtectedRoute path={routeMap.home} exact component={Dashboard} />
+          <ProtectedRoute path={routeMap.calendar_view} exact component={Calendar} />
+          <ProtectedRoute path={routeMap.rate_your_mood} exact component={MoodRating} />
+          <ProtectedRoute path={routeMap.settings} exact component={Settings} />
           <Route component={Login} />
         </Switch>
       </BrowserRouter>
