@@ -38,7 +38,7 @@ class Login extends Component {
           clientId="210802808654-con1ug567egbtnkjf70ha0det1qnlfnt.apps.googleusercontent.com"
           buttonText="Login with Google"
           scope="profile email"
-          className="STH"
+          className="temp"
           onSuccess={this.handleSuccess}
           onFailure={this.handleFailure}
         />
