@@ -39,9 +39,12 @@ class App extends Component {
   };
 
   handleSuccess = (response) => {
-    axios.get('http://8c5b4a25.ngrok.io/api/v1/login', {
+    const tokenID = response.tokenId;
+
+    console.log(response.tokenId);
+    axios.post('http://8c5b4a25.ngrok.io/api/v1/login', {
       params: {
-        response
+        tokenID
       }
     })
       .then(function (response) {
