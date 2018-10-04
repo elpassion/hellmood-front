@@ -1,6 +1,5 @@
 export default {
-  login: '/',
-  home: '/dashboard',
+  home: '/',
   calendar_view: '/podsumowanie',
   rate_your_mood: '/ocena-nastroju',
   settings: '/ustawienia'

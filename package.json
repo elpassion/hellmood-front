@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "node-sass": "^4.9.3",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-google-login": "^3.2.1",

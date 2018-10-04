@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import axios from 'axios';
 
 import routeMap from './config/routeMap';
 
@@ -8,8 +7,8 @@ import Dashboard from './views/Dashboard';
 import Calendar from './views/Calendar';
 import MoodRating from './views/MoodRating';
 import Settings from './views/Settings';
-import ProtectedRoute from './components/ProtectedRoute';
 import {GoogleLogin} from 'react-google-login';
+import { api } from './api';
 
 class App extends Component {
   constructor(props) {
@@ -20,16 +19,37 @@ class App extends Component {
     }
   }
 
+  setToken = (token) => {
+    if (token) {
+      window.localStorage.setItem('tokenId', token);
+    } else {
+      window.localStorage.removeItem('tokenId');
+    }
+  };
+
+  componentDidMount = () => {
+    const tokenID = window.localStorage.getItem('tokenId');
+
+    if (tokenID) {
+      this.setState({
+        isAuthenticated: true,
+      });
+    }
+  };
+
   handleSuccess = (response) => {
     if (response.tokenId) {
       this.setState({
         isAuthenticated: true,
-      })
+      });
+      window.localStorage.setItem('tokenId', response.tokenId);
     }
   };
 
-  handleFailure = (response) => {
-    console.log(response);
+  handleFailure = () => {
+    this.setState({
+      isAuthenticated: false,
+    });
   };
 
   render() {
@@ -47,12 +67,14 @@ class App extends Component {
           />
         )}
       <BrowserRouter>
-        <Switch>
-          <ProtectedRoute path={routeMap.home} isAuthenticated={isAuthenticated} exact component={Dashboard} />
-          <ProtectedRoute path={routeMap.calendar_view} isAuthenticated={isAuthenticated} exact component={Calendar} />
-          <ProtectedRoute path={routeMap.rate_your_mood} isAuthenticated={isAuthenticated} exact component={MoodRating} />
-          <ProtectedRoute path={routeMap.settings} isAuthenticated={isAuthenticated} exact component={Settings} />
-        </Switch>
+        {isAuthenticated && (
+          <Switch>
+            <Route path={routeMap.home} exact component={Dashboard} />
+            <Route path={routeMap.calendar_view} exact component={Calendar} />
+            <Route path={routeMap.rate_your_mood} exact component={MoodRating} />
+            <Route path={routeMap.settings} exact component={Settings} />
+          </Switch>
+        )}
       </BrowserRouter>
       </div>
     );
