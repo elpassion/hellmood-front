@@ -11,7 +11,7 @@ export default class App extends Component {
   render () {
     return (
       <Router>
-        <Login path={routeMap.login}ć />
+        <Login path={routeMap.login} />
         <Redirect to={routeMap.login} default />
       </Router>
     );
