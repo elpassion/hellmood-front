@@ -2,12 +2,7 @@
 import axios from 'axios';
 import { route } from 'preact-router';
 
-let HOST = '';
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-  HOST = process.env.PREACT_APP_API_URL_DEV;
-} else {
-  HOST = process.env.PREACT_APP_API_URL_PROD;
-}
+const  HOST = process.env.NODE_ENV;
 
 const api = axios.create({
   baseURL: HOST,
