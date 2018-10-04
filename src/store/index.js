@@ -1,3 +1,3 @@
-import appStore from './app';
+import authStore from './auth';
 
-export default { appStore };
+export default { authStore };
