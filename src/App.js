@@ -9,10 +9,6 @@ import Calendar from './views/Calendar';
 import MoodRating from './views/MoodRating';
 import Settings from './views/Settings';
 
-const responseGoogle = (response) => {
-  return response;
-};
-
 class App extends Component {
   render() {
     return (

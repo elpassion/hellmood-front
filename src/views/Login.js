@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { GoogleLogin } from 'react-google-login';
-import axios from 'axios';
 // import axios from 'axios';
 
 // import routeMap from '../../config/routeMap';
