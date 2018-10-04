@@ -9,9 +9,14 @@ import Calendar from './views/Calendar';
 import MoodRating from './views/MoodRating';
 import Settings from './views/Settings';
 
+const responseGoogle = (response) => {
+  return response;
+};
+
 class App extends Component {
   render() {
     return (
+      <div>
       <BrowserRouter>
         <Switch>
           <Route path={routeMap.login} exact component={Login} />
@@ -22,6 +27,7 @@ class App extends Component {
           <Route component={Login} />
         </Switch>
       </BrowserRouter>
+      </div>
     );
   }
 }
