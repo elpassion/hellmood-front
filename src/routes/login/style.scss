@@ -1,0 +1,71 @@
+$LINE_MAX_WIDTH: 768 !default;
+$CAR_IMAGE_MAX_WIDTH: 260 !default;
+$CAR_IMAGE_MAX_HEIGHT: 175 !default;
+$LINE_ROTATION: 31deg !default;
+
+.splashWrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.splashImage {
+  z-index: $z-zero;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto 2vh;
+}
+
+.highOrder {
+  z-index: $z-default;
+}
+
+.backCar,
+.frontCar {
+  position: relative;
+  width: 100%;
+  height: remcalc($CAR_IMAGE_MAX_HEIGHT);
+  max-width: remcalc($CAR_IMAGE_MAX_WIDTH);
+  margin: 0 auto;
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    width: remcalc($LINE_MAX_WIDTH);
+    height: 1px;
+    background: $gray;
+    content: '';
+    opacity: .2;
+    transform: rotate($LINE_ROTATION);
+  }
+}
+
+.backCar {
+  &:before {
+    top: remcalc(-165);
+    left: remcalc(-470);
+  }
+
+  &:after {
+    bottom: 0;
+    left: remcalc(-240);
+  }
+}
+
+.frontCar {
+  margin-bottom: 3vh;
+
+  &:before {
+    bottom: remcalc(-160);
+    left: remcalc(10);
+  }
+
+  &:after {
+    bottom: remcalc(-160);
+    left: remcalc(-280);
+  }
+}

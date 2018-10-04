@@ -5,17 +5,11 @@
     "stylelint-scss"
   ],
   "rules": {
-    "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["include", "mixin", "function", "if", "else", "return", "each", "extend", "for"]
-    }],
-    "block-closing-brace-newline-after": ["always", {
-      "ignoreAtRules": ["if", "else"]
-    }],
-
     "color-hex-case": "lower",
     "string-quotes": "single",
     "font-family-name-quotes": "always-where-recommended",
     "number-leading-zero": "never",
+    "selector-pseudo-element-colon-notation": "single",
     "at-rule-empty-line-before": ["always", {
       "ignore": [
         "after-comment",
@@ -24,6 +18,7 @@
         "blockless-after-blockless"
       ]
     }],
+    "at-rule-no-unknown": null,
     "selector-pseudo-class-no-unknown": [
       true, {
         "ignorePseudoClasses": [
@@ -35,22 +30,14 @@
     "order/order": [
       "dollar-variables",
       {
-        type: "at-rule",
-        name: "mixin"
-      },
-      {
-        type: "at-rule",
-        name: "keyframes"
-      },
-      {
-        type: "at-rule",
-        name: "include"
-      },
-      {
-        type: "at-rule",
-        name: "extend"
+        "type": "at-rule",
+        "name": "extend"
       },
       "declarations",
+      {
+        "type": "at-rule",
+        "name": "include"
+      },
       "rules",
       "at-rules"
     ],
@@ -77,11 +64,11 @@
         "order",
         "float",
         "width",
-        "min-width",
-        "max-width",
         "height",
-        "min-height",
+        "max-width",
         "max-height",
+        "min-width",
+        "min-height",
         "margin",
         "margin-top",
         "margin-right",
@@ -218,7 +205,7 @@
         "unicode-bidi",
         "speak"
       ],
-      { unspecified: "bottomAlphabetical" }
+      { "unspecified": "bottomAlphabetical" }
     ]
   }
 }
