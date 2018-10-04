@@ -10,27 +10,30 @@ class Login extends Component {
   handleSuccess = (response) => {
     const tokenID = response.tokenId;
 
-    console.log(response.tokenId);
     axios.post('http://8c5b4a25.ngrok.io/api/v1/login', {
       params: {
         tokenID
       }
     })
-      .then(function (response) {
-        console.log(response);
+      .then(response => {
+        this.updateToken(tokenID);
       })
       .catch(function (error) {
         console.log(error);
       })
       .then(function () {
       });
+
+  };
+
+  updateToken = (param) => {
+    this.props.authStore.login(param);
   };
 
 
   render () {
     return (
       <div>
-        Login mordo <br />
         <GoogleLogin
           clientId="210802808654-con1ug567egbtnkjf70ha0det1qnlfnt.apps.googleusercontent.com"
           buttonText="Login with Google"

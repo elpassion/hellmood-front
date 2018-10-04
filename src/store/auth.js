@@ -1,16 +1,16 @@
 import {
   observable,
-  action,
-  reaction,
-  computed,
+  action
 } from 'mobx';
-import { route } from 'preact-router';
-import api from '../api';
-import routeMap from '../config/routeMap';
 
 class AuthStore {
   @observable token = 'doken';
   @observable user = 'buzer';
+
+  @action login = (token) => {
+    this.token = token;
+    console.log('sth');
+  }
 }
 
 export default new AuthStore();
