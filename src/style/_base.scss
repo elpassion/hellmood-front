@@ -1,0 +1,23 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: $primary-font;
+  font-size: $font-size;
+  background: $white;
+  color: $black;
+  text-size-adjust: 100%;
+}
+
+/* Anti Aliasing for fonts */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Selectin */
+::selection {
+  color: $white;
+  background: $black;
+}
