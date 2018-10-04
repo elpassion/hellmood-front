@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import axios from 'axios';
 
 import routeMap from './config/routeMap';
 
@@ -38,12 +39,19 @@ class App extends Component {
   };
 
   handleSuccess = (response) => {
-    if (response.tokenId) {
-      this.setState({
-        isAuthenticated: true,
+    axios.get('http://8c5b4a25.ngrok.io/api/v1/login', {
+      params: {
+        response
+      }
+    })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+      .then(function () {
       });
-      window.localStorage.setItem('tokenId', response.tokenId);
-    }
   };
 
   handleFailure = () => {
