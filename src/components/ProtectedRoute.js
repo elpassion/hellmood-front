@@ -2,17 +2,12 @@ import React  from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import routeMap from "../config/routeMap";
 
-const fakeAuthCentralState = {
-  isAuthenticated: false
-};
 
 const ProtectedRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
-    fakeAuthCentralState.isAuthenticated
+    props.isAuthenticated
       ? <Component {...props} />
-      : <Redirect to={{
-        pathname: routeMap.login
-      }} />
+      : null
   )} />
 );
 
