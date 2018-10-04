@@ -1,0 +1,55 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-preact"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "max-len": [
+      "warn",
+      100,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-console": 1,
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "jsx-quotes": ["error", "prefer-single"],
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"],
+    "indent": 0,
+    "no-unused-vars": 0,
+    "react/display-name": 0,
+    "react/react-in-jsx-scope": 0,
+    "no-plusplus": 0,
+    "import/no-cycle": 0,
+    "import/no-unresolved": [2],
+    "linebreak-style": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-unused-expressions": ["warn", { "allowShortCircuit": true, "allowTernary": true }],
+    "curly": [0],
+    "class-methods-use-this": [0],
+    "no-param-reassign": [0]
+  },
+  "globals": {
+    "preact": true
+  },
+  "settings": {
+    "import/core-modules": [ "preact" ]
+  }
+}
