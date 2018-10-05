@@ -4,12 +4,14 @@ import {
 } from 'mobx';
 
 class AuthStore {
-  @observable token = 'doken';
-  @observable user = 'buzer';
+  @observable isAuthenticated = false;
+  @observable token;
 
   @action login = (token) => {
     this.token = token;
-    console.log('sth');
+    if (token) {
+      this.isAuthenticated = true;
+    }
   }
 }
 
