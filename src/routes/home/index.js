@@ -1,10 +1,13 @@
 import { Component } from 'preact';
+import commonStyle from '../common';
 
 class Home extends Component {
   render () {
     return (
-      <div>
-        HOME
+      <div className={commonStyle.mainContainer}>
+        <div className={commonStyle.appContainer}>
+          
+        </div>
       </div>
     );
   }
