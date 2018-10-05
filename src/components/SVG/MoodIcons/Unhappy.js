@@ -1,5 +1,5 @@
 const Unhappy = props => (
-  <svg width={72} height={30} {...props}>
+  <svg width={72} height={30} {...props} viewBox='0 0 72 30'>
     <g fill='none'>
       <circle cx={62} cy={10} r={10} fill='#FFF' />
       <circle cx={62} cy={10} r={4} fill='#EA7980' />

@@ -88,20 +88,6 @@
   color: $cadetblue;
 }
 
-.averageMoodIcon {
-  grid-area: icon;
-  display: flex;
-  justify-content: center;
-  padding: remcalc(8) remcalc(20);
-  background: $sad;
-  border-radius: remcalc(8);
-  box-shadow: 0 remcalc(10) remcalc(20) 0 rgba(221,51,61,0.3);
-
-  & > svg {
-    display: block;
-  }
-}
-
 .homeButtonWrapper {
   width: 100%;
 

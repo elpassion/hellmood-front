@@ -1,5 +1,5 @@
 const Sad = props => (
-  <svg width={72} height={30} {...props}>
+  <svg width={72} height={30} {...props} viewBox='0 0 72 30'>
     <g fill='none' fillRule='evenodd'>
       <circle cx={62} cy={10} r={10} fill='#FFF' fillRule='nonzero' />
       <circle cx={62} cy={10} r={4} fill='#B2232B' fillRule='nonzero' />

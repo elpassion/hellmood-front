@@ -6,7 +6,13 @@ import style from './mood.scss';
 
 import Logotype from '../../components/SVG/Logotype';
 import { Happy, Unhappy, Sad, Satisfied, Neutral } from '../../components/SVG/MoodIcons';
+import axios from 'axios';
+import {route} from 'preact-router';
+import routeMap from '../../config/routeMap';
+import {inject, observer} from 'mobx-react';
 
+@inject('authStore')
+@observer
 class RateYourDay extends Component {
   constructor (props) {
     super(props);
@@ -28,9 +34,24 @@ class RateYourDay extends Component {
   };
 
   submitForm = (evt) => {
+    const myToken = this.props.authStore.token;
     evt.preventDefault();
 
-    console.log('send');
+    axios.post(`${process.env.PREACT_APP_API_URL}/api/v1/create`, {
+      headers: myToken,
+      params: {
+        rate: this.state.userRating,
+      },
+    })
+      .then(response => {
+        console.log(response);
+      })
+      .catch(function (error) {
+        return error;
+      })
+      .then(() => {
+        console.log('done');
+      });
   };
 
   render () {
@@ -48,24 +69,44 @@ class RateYourDay extends Component {
             <p className={style.rateYourMoodHeader}>
               How is your mood?
             </p>
+
             <div className={style.chooseMoodContainer}>
-              <button className='mood' id='1' onClick={this.handleMoodSelection}>
+              <button
+                id='1'
+                onClick={this.handleMoodSelection}
+                className={classnames(commonStyle.moodIconWrapper, {[commonStyle.isSad]: this.state.userRating === '1'})}
+              >
                 <Sad className={commonStyle.noEvents} />
               </button>
-              <button className='mood' id='2' onClick={this.handleMoodSelection}>
+              <button
+                id='2'
+                onClick={this.handleMoodSelection}
+                className={classnames(commonStyle.moodIconWrapper, {[commonStyle.isUnhappy]: this.state.userRating === '2'})}
+              >
                 <Unhappy className={commonStyle.noEvents} />
               </button>
-              <button className='mood' id='3' onClick={this.handleMoodSelection}>
+              <button
+                id='3'
+                onClick={this.handleMoodSelection}
+                className={classnames(commonStyle.moodIconWrapper, {[commonStyle.isNeutral]: this.state.userRating === '3'})}
+              >
                 <Neutral className={commonStyle.noEvents} />
               </button>
-              <button className='mood' id='4' onClick={this.handleMoodSelection}>
+              <button
+                id='4'
+                onClick={this.handleMoodSelection}
+                className={classnames(commonStyle.moodIconWrapper, {[commonStyle.isSatisfied]: this.state.userRating === '4'})}
+              >
                 <Satisfied className={commonStyle.noEvents} />
               </button>
-              <button className='mood' id='5' onClick={this.handleMoodSelection}>
+              <button
+                id='5'
+                onClick={this.handleMoodSelection}
+                className={classnames(commonStyle.moodIconWrapper, {[commonStyle.isHappy]: this.state.userRating === '5'})}
+              >
                 <Happy className={commonStyle.noEvents} />
               </button>
             </div>
-            <input type='hidden' required value={this.state.userRating} />
             <button className={buttonClasses}>
               Send Review
             </button>

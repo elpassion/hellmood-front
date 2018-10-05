@@ -3,6 +3,8 @@ $_CONTAINER_HEIGHT: 667 !default;
 
 $_BUTTON_HEIGHT: 48 !default;
 
+$_MOOD_ICON_HEIGHT: 44 !default;
+
 .mainContainer {
   display: flex;
   width: 100%;
@@ -91,4 +93,81 @@ $_BUTTON_HEIGHT: 48 !default;
 
 .noEvents {
   pointer-events: none;
+}
+
+.moodIconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: remcalc($_MOOD_ICON_HEIGHT);
+  margin: 0 0 remcalc(16);
+  padding: 0;
+  border: 0;
+  user-select: none;
+  border-radius: remcalc($border-radius);
+  box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($gullgray, .3);
+  background: $gradient-inactive;
+  cursor: pointer;
+  transition: box-shadow .6s $ease-cubic, transform .6s $ease-cubic;
+
+  &:focus {
+    outline: 0;
+  }
+
+  & > svg {
+    display: block;
+    height: 70%;
+    filter: grayscale(1);
+  }
+
+  &.isSad {
+    box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($punch, .3);
+    background: $gradient-sad;
+    transform: scale(1.05);
+
+    & > svg {
+      filter: grayscale(0);
+    }
+  }
+
+  &.isUnhappy {
+    box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($froly, .3);
+    background: $gradient-unhappy;
+    transform: scale(1.05);
+
+    & > svg {
+      filter: grayscale(0);
+    }
+  }
+
+  &.isNeutral {
+    box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($creamcan, .3);
+    background: $gradient-neutral;
+    transform: scale(1.05);
+
+    & > svg {
+      filter: grayscale(0);
+    }
+  }
+
+  &.isSatisfied {
+    box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($mossgreen, .3);
+    background: $gradient-satisfied;
+    transform: scale(1.05);
+
+    & > svg {
+      filter: grayscale(0);
+    }
+  }
+
+  &.isHappy {
+    box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($fern, .3);
+    background: $gradient-happy;
+    transform: scale(1.05);
+
+    & > svg {
+      filter: grayscale(0);
+    }
+  }
 }

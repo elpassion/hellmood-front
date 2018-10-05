@@ -8,5 +8,5 @@ const api = axios.create({
 });
 
 export default {
-  instance: api
+  instance: api,
 };

@@ -3,6 +3,7 @@ const Happy = props => (
     xmlnsXlink='http://www.w3.org/1999/xlink'
     width={72}
     height={30}
+    viewBox='0 0 72 30'
     {...props}
   >
     <defs>
