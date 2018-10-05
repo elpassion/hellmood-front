@@ -17,7 +17,6 @@ $_BUTTON_HEIGHT: 48 !default;
   height: 100%;
   margin: 0 auto;
 
-
   @media #{$screen-sm} {
     max-width: remcalc($_CONTAINER_WIDTH);
     box-shadow: 0 6px 20px 0 rgba($black, .1);
@@ -48,4 +47,10 @@ $_BUTTON_HEIGHT: 48 !default;
   border: 0;
   font-family: inherit;
   border-radius: remcalc($border-radius);
+  cursor: pointer;
+  transition: background .6s $ease-cubic;
+
+  &:hover {
+    background: rgba($portgore, .8);
+  }
 }
