@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: remcalc(14) remcalc(20);
   box-shadow: 0 remcalc(10) remcalc(30) 0 rgba(155,179,196,0.2);
 
@@ -26,6 +27,7 @@
   text-transform: uppercase;
   border-radius: remcalc(8);
   box-shadow: 0 remcalc(10) remcalc(30) 0 rgba(155,179,196,0.3);
+  user-select: none;
 
   display: grid;
   height: 100%;
@@ -87,4 +89,8 @@
   & > svg {
     display: block;
   }
+}
+
+.homeButtonWrapper {
+  width: 100%;
 }
