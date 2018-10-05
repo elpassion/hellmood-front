@@ -5,10 +5,33 @@ import commonStyle from '../common';
 import style from './mood.scss';
 
 import Logotype from '../../components/SVG/Logotype';
+import { Happy, Unhappy, Sad, Satisfied, Neutral } from '../../components/SVG/MoodIcons';
 
 class RateYourDay extends Component {
+  constructor (props) {
+    super(props);
+
+    this.handleMoodSelection = this.handleMoodSelection.bind(this);
+  }
+
+  state = {
+    userRating: 0,
+  };
+
+  handleMoodSelection = (evt) => {
+    evt.preventDefault();
+    const moodRating = evt.target.id;
+
+    this.setState({
+      userRating: moodRating,
+    });
+  };
+
   render () {
+    const userNotRatedYet = this.state.userRating === 0;
+
     const appContainerClasses = classnames(commonStyle.appContainer, commonStyle.flexContainer);
+    const buttonClasses = classnames(commonStyle.primaryButton, {[commonStyle.isDisabled]: userNotRatedYet});
 
     return (
       <div className={commonStyle.mainContainer}>
@@ -20,23 +43,24 @@ class RateYourDay extends Component {
               How is your mood?
             </p>
             <div className={style.chooseMoodContainer}>
-              <div className='mood' id='1'>
-                1
-              </div>
-              <div className='mood' id='2'>
-                2
-              </div>
-              <div className='mood' id='3'>
-                3
-              </div>
-              <div className='mood' id='4'>
-                4
-              </div>
-              <div className='mood' id='5'>
-                5
-              </div>
+              <button className='mood' id='1' onClick={this.handleMoodSelection}>
+                <Sad className={commonStyle.noEvents} />
+              </button>
+              <button className='mood' id='2' onClick={this.handleMoodSelection}>
+                <Unhappy className={commonStyle.noEvents} />
+              </button>
+              <button className='mood' id='3' onClick={this.handleMoodSelection}>
+                <Neutral className={commonStyle.noEvents} />
+              </button>
+              <button className='mood' id='4' onClick={this.handleMoodSelection}>
+                <Satisfied className={commonStyle.noEvents} />
+              </button>
+              <button className='mood' id='5' onClick={this.handleMoodSelection}>
+                <Happy className={commonStyle.noEvents} />
+              </button>
             </div>
-            <button className={commonStyle.primaryButton}>
+            <input type='hidden' required value={this.state.userRating} />
+            <button className={buttonClasses}>
               Send Review
             </button>
           </form>
