@@ -9,8 +9,22 @@ import Logotype from '../../components/SVG/Logotype';
 import Settings from '../../components/SVG/Settings';
 import {Unhappy, Happy, Neutral, Sad, Satisfied} from "../../components/SVG/MoodIcons";
 import IconMore from "../../components/SVG/IconMore";
+import axios from "axios";
+import {route} from "preact-router";
 
 class Home extends Component {
+  componentDidMount() {
+    const myToken = this.props.authStore.token;
+
+    axios.get(`${process.env.PREACT_APP_API_URL}/api/v1/index`,{ headers: { 'Authorization': myToken }})
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        return error;
+      });
+  }
+
   render () {
     const navClasses = classnames(style.navContainer, commonStyle.container);
     const containerClasses = classnames(commonStyle.appContainer, commonStyle.isFixed);
