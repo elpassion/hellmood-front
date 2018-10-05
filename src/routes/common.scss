@@ -28,6 +28,11 @@ $_BUTTON_HEIGHT: 48 !default;
   padding: remcalc(28) remcalc(20);
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 remcalc(20);
+}
+
 .loginContainer {
   width: 100%;
   color: $portgore;

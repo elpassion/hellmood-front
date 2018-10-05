@@ -3,7 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: remcalc(14) 0;
+  padding: remcalc(14) remcalc(20);
+  box-shadow: 0 10px 30px 0 rgba(155,179,196,0.2);
 
   & > svg {
     display: block;
