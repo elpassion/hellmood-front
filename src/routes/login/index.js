@@ -3,11 +3,13 @@ import axios from 'axios';
 import { GoogleLogin } from 'react-google-login';
 import { inject, observer } from 'mobx-react';
 import { route } from 'preact-router';
-import routeMap from '../../config/routeMap';
 import classnames from 'classnames';
 
+import routeMap from '../../config/routeMap';
 import style from './login.scss';
 import commonStyle from '../common.scss';
+
+import Logotype from '../../components/SVG/Logotype';
 
 @inject('authStore')
 @observer
@@ -49,7 +51,7 @@ class Login extends Component {
     return (
       <div className={commonStyle.mainContainer}>
         <div className={appContainerClasses}>
-          <img src='./assets/logotype.svg' />
+          <Logotype />
           <div className={style.loginContainer}>
             <p className={style.signInHeader}>
               Sign In
