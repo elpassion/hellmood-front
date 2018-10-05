@@ -59,9 +59,19 @@ $_BUTTON_HEIGHT: 48 !default;
   text-decoration: none;
   border-radius: remcalc($border-radius);
   cursor: pointer;
+  user-select: none;
   transition: background .6s $ease-cubic;
 
   &:hover {
     background: rgba($portgore, .8);
   }
+
+  &.isDisabled {
+    pointer-events: none;
+    background: rgba($portgore, .4);
+  }
+}
+
+.noEvents {
+  pointer-events: none;
 }
