@@ -2,7 +2,6 @@ import { Component } from 'preact';
 import classnames from 'classnames';
 import axios from 'axios';
 import { inject, observer } from 'mobx-react';
-import { Link } from 'preact-router';
 
 import routeMap from '../../config/routeMap';
 import commonStyle from '../common';
@@ -120,12 +119,12 @@ class RateYourDay extends Component {
           )}
           {this.state.formSentSuccessfull && (
             <div className={style.rateYourMoodForm}>
-              <p className="STH">
-                S
+              <p className={style.yourMoodHasBeenSaved}>
+                Your mood has been saved.
               </p>
-              <Link to={routeMap.home} className={commonStyle.primaryButton}>
-                Wroóć
-              </Link>
+              <a href={routeMap.home} className={commonStyle.primaryButton}>
+                Back to Dashboard
+              </a>
             </div>
           )}
         </div>
