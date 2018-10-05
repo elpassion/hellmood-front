@@ -14,10 +14,14 @@ $_BUTTON_HEIGHT: 48 !default;
 
 .appContainer {
   width: 100%;
-  max-width: remcalc($_CONTAINER_WIDTH);
-  min-height: remcalc($_CONTAINER_HEIGHT / 1.1);
+  height: 100%;
   margin: 0 auto;
-  box-shadow: 0 6px 20px 0 rgba($black, .1);
+
+  @media #{$screen-sm} {
+    max-width: remcalc($_CONTAINER_WIDTH);
+    box-shadow: 0 6px 20px 0 rgba($black, .1);
+    max-height: remcalc($_CONTAINER_HEIGHT / 1.1);
+  }
 }
 
 .flexContainer {
@@ -33,29 +37,6 @@ $_BUTTON_HEIGHT: 48 !default;
   padding: 0 remcalc(20);
 }
 
-.loginContainer {
-  width: 100%;
-  color: $portgore;
-  text-align: center;
-}
-
-.signInHeader {
-  margin: 0 0 remcalc(20);
-  font-size: remcalc(28);
-  font-weight: $bold;
-}
-
-.signInSubheader {
-  margin: 0 0 remcalc(32);
-  font-size: remcalc(16);
-  color: $raven;
-}
-
-.loginCopyright {
-  font-size: remcalc(14);
-  color: $raven;
-}
-
 .primaryButton {
   display: block;
   width: 100%;
@@ -69,4 +50,10 @@ $_BUTTON_HEIGHT: 48 !default;
   border: 0;
   font-family: inherit;
   border-radius: remcalc($border-radius);
+  cursor: pointer;
+  transition: background .6s $ease-cubic;
+
+  &:hover {
+    background: rgba($portgore, .8);
+  }
 }

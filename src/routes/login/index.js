@@ -50,11 +50,11 @@ class Login extends Component {
       <div className={commonStyle.mainContainer}>
         <div className={appContainerClasses}>
           <img src='./assets/logotype.svg' />
-          <div className={commonStyle.loginContainer}>
-            <p className={commonStyle.signInHeader}>
+          <div className={style.loginContainer}>
+            <p className={style.signInHeader}>
               Sign In
             </p>
-            <p className={commonStyle.signInSubheader}>
+            <p className={style.signInSubheader}>
               Join your EL Mood space
             </p>
             <GoogleLogin
@@ -66,7 +66,7 @@ class Login extends Component {
               onFailure={this.handleFailure}
             />
           </div>
-          <p className={commonStyle.loginCopyright}>
+          <p className={style.loginCopyright}>
             © El Passion 2018
           </p>
         </div>

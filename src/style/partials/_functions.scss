@@ -1,4 +1,14 @@
-/* Rem Calculation */
 @function remcalc($size) {
   @return (($size / $base-size) * 1rem);
 }
+
+@function get($map, $key: 'default') {
+  @return map-get($map, $key);
+}
+
+@function media-min-width($screens-name) {
+  @return ('only screen and (min-width: #{get($screens, $screens-name)})');
+}
+
+$screen-sm: media-min-width('sm');
+$screen-md: media-min-width('md');

@@ -1,3 +1,22 @@
-.homeWrapper {
+.loginContainer {
+  width: 100%;
+  color: $portgore;
+  text-align: center;
+}
 
+.signInHeader {
+  margin: 0 0 remcalc(20);
+  font-size: remcalc(28);
+  font-weight: $bold;
+}
+
+.signInSubheader {
+  margin: 0 0 remcalc(32);
+  font-size: remcalc(16);
+  color: $raven;
+}
+
+.loginCopyright {
+  font-size: remcalc(14);
+  color: $raven;
 }
