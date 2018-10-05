@@ -27,7 +27,7 @@ class RateYourDay extends Component {
     });
   };
 
-  submitForm = () => {
+  submitForm = (evt) => {
     evt.preventDefault();
 
     console.log('send');
