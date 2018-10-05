@@ -10,9 +10,7 @@ class Login extends Component {
   handleSuccess = (response) => {
     const tokenID = response.tokenId;
     axios.post(`${process.env.PREACT_APP_API_URL}/api/v1/login`, {
-      params: {
-        tokenID,
-      },
+      tokenID,
     })
       .then(response => {
         this.updateToken(response.data.token);
