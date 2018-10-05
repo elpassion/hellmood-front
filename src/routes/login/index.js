@@ -5,6 +5,8 @@ import { inject, observer } from 'mobx-react';
 import { route } from 'preact-router';
 import routeMap from '../../config/routeMap';
 
+import style from './login.scss';
+
 @inject('authStore')
 @observer
 class Login extends Component {
@@ -19,13 +21,15 @@ class Login extends Component {
         this.updateToken(response.data.token);
       })
       .catch(function (error) {
-        console.log(error);
-        // handleError
+        return error;
       })
       .then(() => {
-        console.log(this.props.authStore.isAuthenticated);
         route(routeMap.home);
       });
+  };
+
+  handleFailure = (response) => {
+    console.log(response);
   };
 
   updateToken = (param) => {
@@ -40,7 +44,7 @@ class Login extends Component {
 
   render () {
     return (
-      <div>
+      <div className={style.topkek}>
         <GoogleLogin
           clientId="210802808654-con1ug567egbtnkjf70ha0det1qnlfnt.apps.googleusercontent.com"
           buttonText="Login with Google"
