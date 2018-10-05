@@ -26,7 +26,7 @@ $froly: #f48f8d !default;
 $punch: #dc333d !default;
 
 $happy: linear-gradient($_GRADIENT_ANGLE, $celadon 0%, $fern 100%) !default;
-$satisfied linear-gradient($_GRADIENT_ANGLE, $blueromance 0%, $mossgreen 100%) !default;
+$satisfied: linear-gradient($_GRADIENT_ANGLE, $blueromance 0%, $mossgreen 100%) !default;
 $neutral: linear-gradient($_GRADIENT_ANGLE, $visvis 0%, $creamcan 100%) !default;
 $unhappy: linear-gradient($_GRADIENT_ANGLE, $yourpink 0%, $froly 100%) !default;
 $sad: linear-gradient($_GRADIENT_ANGLE, $geraldine 0%, $punch 100%) !default;
