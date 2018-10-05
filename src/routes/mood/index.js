@@ -38,9 +38,7 @@ class RateYourDay extends Component {
     evt.preventDefault();
 
     axios.post(`${process.env.PREACT_APP_API_URL}/api/v1/create`, {
-      params: {
-        rate: this.state.userRating,
-      },
+      rate: this.state.userRating,
     }, { headers: { 'Authorization': myToken }})
       .then(response => {
         console.log(response);

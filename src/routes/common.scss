@@ -124,7 +124,7 @@ $_MOOD_ICON_HEIGHT: 44 !default;
   &.isSad {
     box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($punch, .3);
     background: $gradient-sad;
-    transform: scale(1.05);
+    transform: scale(1.02);
 
     & > svg {
       filter: grayscale(0);
@@ -134,7 +134,7 @@ $_MOOD_ICON_HEIGHT: 44 !default;
   &.isUnhappy {
     box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($froly, .3);
     background: $gradient-unhappy;
-    transform: scale(1.05);
+    transform: scale(1.02);
 
     & > svg {
       filter: grayscale(0);
@@ -144,7 +144,7 @@ $_MOOD_ICON_HEIGHT: 44 !default;
   &.isNeutral {
     box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($creamcan, .3);
     background: $gradient-neutral;
-    transform: scale(1.05);
+    transform: scale(1.02);
 
     & > svg {
       filter: grayscale(0);
@@ -154,7 +154,7 @@ $_MOOD_ICON_HEIGHT: 44 !default;
   &.isSatisfied {
     box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($mossgreen, .3);
     background: $gradient-satisfied;
-    transform: scale(1.05);
+    transform: scale(1.02);
 
     & > svg {
       filter: grayscale(0);
@@ -164,7 +164,7 @@ $_MOOD_ICON_HEIGHT: 44 !default;
   &.isHappy {
     box-shadow: 0 remcalc(10) remcalc(20) 0 rgba($fern, .3);
     background: $gradient-happy;
-    transform: scale(1.05);
+    transform: scale(1.02);
 
     & > svg {
       filter: grayscale(0);
