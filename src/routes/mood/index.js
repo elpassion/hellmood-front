@@ -27,6 +27,12 @@ class RateYourDay extends Component {
     });
   };
 
+  submitForm = () => {
+    evt.preventDefault();
+
+    console.log('send');
+  };
+
   render () {
     const userNotRatedYet = this.state.userRating === 0;
 
