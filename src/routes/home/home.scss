@@ -42,7 +42,7 @@
   height: 100%;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 2fr;
-  grid-gap: remcalc(8) 20px;
+  grid-gap: remcalc(8) remcalc(20);
   grid-template-areas: "date header" "empty icon";
 
   &:first-child {
@@ -93,5 +93,20 @@
 
   @media #{$screen-sm} {
     flex: 0 0 remcalc(48);
+  }
+}
+
+.moodBlockCommentWrapper {
+  .commentTitle {
+    color: $cadetblue;
+    margin: 0 0 remcalc(14);
+  }
+
+  .commentContent {
+    text-transform: initial;
+    font-size: remcalc(14);
+    color: $oxfordblue;
+    font-weight: $regular;
+    line-height: remcalc(20);
   }
 }
