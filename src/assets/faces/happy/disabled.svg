@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="30px" viewBox="0 0 72 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>happy/disabled</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#90A8BA" offset="0%"></stop>
+            <stop stop-color="#7090A7" offset="100%"></stop>
+        </linearGradient>
+        <path d="M11,10 C17.0751322,10 22,5.5228475 22,0 L0,0 C0,5.5228475 4.92486775,10 11,10 Z" id="path-2"></path>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#BFCCD9" offset="0%"></stop>
+            <stop stop-color="#8EADC3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="happy/disabled" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="62" cy="10" r="10"></circle>
+        <circle id="Oval" fill="#94A6B5" fill-rule="nonzero" cx="62" cy="10" r="4"></circle>
+        <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="10" cy="10" r="10"></circle>
+        <circle id="Oval" fill="#94A6B5" fill-rule="nonzero" cx="10" cy="10" r="4"></circle>
+        <path d="M31,13 L41,13" id="Path" stroke="#A4B7C9" stroke-width="2" stroke-linecap="round" fill-rule="nonzero"></path>
+        <g id="Oval" transform="translate(25.000000, 20.000000)">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="Mask" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"></use>
+            <ellipse fill="url(#linearGradient-4)" fill-rule="nonzero" mask="url(#mask-3)" cx="16.5" cy="14" rx="10.5" ry="10"></ellipse>
+        </g>
+    </g>
+</svg>

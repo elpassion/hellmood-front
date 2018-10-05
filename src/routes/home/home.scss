@@ -1,0 +1,18 @@
+/* NAVBAR */
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: remcalc(14) 0;
+
+  & > svg {
+    display: block;
+
+    &:first-child { margin: 0 remcalc(20) 0 0; }
+  }
+}
+
+/* Home */
+.homeWrapper {
+  background: red;
+}
