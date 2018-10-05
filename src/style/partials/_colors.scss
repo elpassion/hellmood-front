@@ -1,3 +1,33 @@
 /* Colors */
 $white: #fff !default;
 $black: #000 !default;
+
+$portgore: #1a1a3f !default;
+$raven: #6d7588 !default;
+$cadetblue: #a9afc1 !default;
+$gullgray: #9caab9 !default;
+$oxfordblue: #3c4559 !default;
+$mystic: #dfe3ec !default;
+$athensgray: #f0f2f6 !default;
+
+/* Gradient Colors */
+$_GRADIENT_ANGLE: 180deg !default;
+$celadon: #a7e0ae !default;
+$fern: #6ebe76 !default;
+$mossgreen: #a2d6ad !default;
+$blueromance: #ccf8d5 !default;
+$visvis: #ffec9d !default;
+$creamcan: #f6c86a !default;
+$boticelli: #d2dee9 !default;
+$nepal: #9bb3c4 !default;
+$yourpink: #ddbebd !default;
+$geraldine: #f88f90 !default;
+$froly: #f48f8d !default;
+$punch: #dc333d !default;
+
+$happy: linear-gradient($_GRADIENT_ANGLE, $celadon 0%, $fern 100%) !default;
+$satisfied linear-gradient($_GRADIENT_ANGLE, $blueromance 0%, $mossgreen 100%) !default;
+$neutral: linear-gradient($_GRADIENT_ANGLE, $visvis 0%, $creamcan 100%) !default;
+$unhappy: linear-gradient($_GRADIENT_ANGLE, $yourpink 0%, $froly 100%) !default;
+$sad: linear-gradient($_GRADIENT_ANGLE, $geraldine 0%, $punch 100%) !default;
+$inactive: linear-gradient($_GRADIENT_ANGLE, $boticelli 0%, $punch 100%) !default;
