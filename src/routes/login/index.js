@@ -6,6 +6,7 @@ import { route } from 'preact-router';
 import routeMap from '../../config/routeMap';
 
 import style from './login.scss';
+import commonStyle from '../common.scss';
 
 @inject('authStore')
 @observer
@@ -44,8 +45,8 @@ class Login extends Component {
 
   render () {
     return (
-      <div className={style.homeWrapper}>
-        <div>
+      <div className={commonStyle.mainContainer}>
+        <div className={commonStyle.appContainer}>
           <GoogleLogin
             clientId="210802808654-con1ug567egbtnkjf70ha0det1qnlfnt.apps.googleusercontent.com"
             buttonText="Login with Google"
