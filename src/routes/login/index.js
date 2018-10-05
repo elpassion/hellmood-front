@@ -49,14 +49,26 @@ class Login extends Component {
     return (
       <div className={commonStyle.mainContainer}>
         <div className={appContainerClasses}>
-          <GoogleLogin
-            clientId="210802808654-con1ug567egbtnkjf70ha0det1qnlfnt.apps.googleusercontent.com"
-            buttonText="Login with Google"
-            scope="profile email"
-            className="temp"
-            onSuccess={this.handleSuccess}
-            onFailure={this.handleFailure}
-          />
+          <img src='./assets/logotype.svg' />
+          <div className={commonStyle.loginContainer}>
+            <p className={commonStyle.signInHeader}>
+              Sign In
+            </p>
+            <p className={commonStyle.signInSubheader}>
+              Join your EL Mood space
+            </p>
+            <GoogleLogin
+              clientId='210802808654-con1ug567egbtnkjf70ha0det1qnlfnt.apps.googleusercontent.com'
+              buttonText='Sign in with google'
+              scope='profile email'
+              className={commonStyle.primaryButton}
+              onSuccess={this.handleSuccess}
+              onFailure={this.handleFailure}
+            />
+          </div>
+          <p className={commonStyle.loginCopyright}>
+            © El Passion 2018
+          </p>
         </div>
       </div>
     );
