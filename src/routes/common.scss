@@ -25,8 +25,25 @@ $_BUTTON_HEIGHT: 48 !default;
   }
 
   &.isFixed {
-    display: flex;
-    flex-direction: column;
+    padding: 0 0 remcalc($_BUTTON_HEIGHT + 30);
+
+    @media #{$screen-sm} {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 remcalc(20);
+    }
+
+    .primaryButton {
+      position: fixed;
+      bottom: remcalc(20);
+      left: remcalc(20);
+      width: calc(#{100%} - #{2 * remcalc(20)});
+
+      @media #{$screen-sm} {
+        position: static;
+        width: 100%;
+      }
+    }
   }
 }
 

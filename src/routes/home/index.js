@@ -12,6 +12,7 @@ class Home extends Component {
   render () {
     const navClasses = classnames(style.navContainer, commonStyle.container);
     const containerClasses = classnames(commonStyle.appContainer, commonStyle.isFixed);
+    const buttonContainer = classnames(commonStyle.container, style.homeButtonWrapper);
     return (
       <div className={commonStyle.mainContainer}>
         <div className={containerClasses}>
@@ -93,7 +94,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className={commonStyle.container}>
+          <div className={buttonContainer}>
             <a
               href={routeMap.rateYourDay}
               className={commonStyle.primaryButton}
