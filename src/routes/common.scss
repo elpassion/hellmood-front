@@ -1,6 +1,8 @@
 $_CONTAINER_WIDTH: 375 !default;
 $_CONTAINER_HEIGHT: 667 !default;
 
+$_BUTTON_HEIGHT: 48 !default;
+
 .mainContainer {
   display: flex;
   width: 100%;
@@ -15,11 +17,51 @@ $_CONTAINER_HEIGHT: 667 !default;
   max-width: remcalc($_CONTAINER_WIDTH);
   min-height: remcalc($_CONTAINER_HEIGHT / 1.1);
   margin: 0 auto;
-  padding: 0 remcalc(20) remcalc(20);
   box-shadow: 0 6px 20px 0 rgba($black, .1);
 }
 
 .flexContainer {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: remcalc(28) remcalc(20);
+}
+
+.loginContainer {
+  width: 100%;
+  color: $portgore;
+  text-align: center;
+}
+
+.signInHeader {
+  margin: 0 0 remcalc(20);
+  font-size: remcalc(28);
+  font-weight: $bold;
+}
+
+.signInSubheader {
+  margin: 0 0 remcalc(32);
+  font-size: remcalc(16);
+  color: $raven;
+}
+
+.loginCopyright {
+  font-size: remcalc(14);
+  color: $raven;
+}
+
+.primaryButton {
+  display: block;
+  width: 100%;
+  height: remcalc($_BUTTON_HEIGHT);
+  line-height: remcalc($_BUTTON_HEIGHT);
+  background: $portgore;
+  color: $white;
+  font-size: remcalc(14);
+  text-transform: uppercase;
+  font-weight: $bold;
+  border: 0;
+  font-family: inherit;
+  border-radius: remcalc($border-radius);
 }
