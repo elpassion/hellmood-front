@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: remcalc(14) remcalc(20);
-  box-shadow: 0 10px 30px 0 rgba(155,179,196,0.2);
+  box-shadow: 0 remcalc(10) remcalc(30) 0 rgba(155,179,196,0.2);
 
   & > svg {
     display: block;
@@ -14,6 +14,29 @@
 }
 
 /* Home */
-.homeWrapper {
-  background: red;
+.homeSection {
+  padding: remcalc(16) 0 0;
+}
+
+.moodBlock {
+  position: relative;
+  padding: remcalc(14) remcalc(16);
+  font-size: remcalc(12);
+  font-weight: $bold;
+  text-transform: uppercase;
+  border-radius: remcalc(8);
+  box-shadow: 0 remcalc(10) remcalc(30) 0 rgba(155,179,196,0.3);
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    left: 0;
+  }
+
+  &:before {
+    top: remcalc(-24);
+    content: 'Today';
+    color: $fern;
+  }
 }
