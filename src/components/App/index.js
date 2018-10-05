@@ -5,7 +5,7 @@ import routeMap from '../../config/routeMap';
 
 import Login from '../../routes/login';
 import Home from '../../routes/home';
-import RateYourDay from '../../routes/rateYourDay';
+import RateYourDay from '../../routes/mood';
 
 import Redirect from '../Redirect';
 import ProtectedRoute from '../ProtectedRoute';

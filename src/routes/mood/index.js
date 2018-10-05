@@ -1,13 +1,14 @@
 import { Component } from 'preact';
 
-class Home extends Component {
+class Mood extends Component {
+
   render () {
     return (
       <div>
-        HOME
+        Mood
       </div>
     );
   }
 }
 
-export default Home;
+export default Mood;
