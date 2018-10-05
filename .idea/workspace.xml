@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e211208f-7c24-494e-aa43-1fd960fc62c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/routes/home/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home/home.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,14 +39,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="34" />
-          <entry key="js" value="345" />
+          <entry key="js" value="462" />
           <entry key="scss" value="931" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="34" />
-          <entry key="JavaScript" value="345" />
+          <entry key="JavaScript" value="462" />
           <entry key="SCSS" value="931" />
         </counts>
       </usages-collector>
@@ -167,13 +166,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/home/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+            <state relative-caret-position="40">
+              <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#310#6462#0" />
+                <element signature="e#6473#8181#0" />
                 <element signature="e#6637#6706#0" />
                 <element signature="e#6725#8158#0" />
               </folding>
@@ -181,7 +181,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/home/home.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="488">
@@ -279,8 +279,8 @@
         <option value="$PROJECT_DIR$/src/style/_helpers.scss" />
         <option value="$PROJECT_DIR$/src/style/partials/_functions.scss" />
         <option value="$PROJECT_DIR$/src/routes/common.scss" />
-        <option value="$PROJECT_DIR$/src/routes/home/index.js" />
         <option value="$PROJECT_DIR$/src/routes/home/home.scss" />
+        <option value="$PROJECT_DIR$/src/routes/home/index.js" />
       </list>
     </option>
   </component>
@@ -1435,7 +1435,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29405000" />
+    <option name="totallyTimeSpent" value="29542000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1703,18 +1703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/home/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#6637#6706#0" />
-            <element signature="e#6725#8158#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style/partials/_colors.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1726,6 +1714,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
           <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/home/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding>
+            <element signature="e#310#6462#0" />
+            <element signature="e#6473#8181#0" />
+            <element signature="e#6637#6706#0" />
+            <element signature="e#6725#8158#0" />
+          </folding>
         </state>
       </provider>
     </entry>

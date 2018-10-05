@@ -1,5 +1,6 @@
 import { Component } from 'preact';
 import classnames from 'classnames';
+import routeMap from '../../config/routeMap';
 import commonStyle from '../common';
 import style from './home.scss';
 
@@ -32,6 +33,12 @@ class Home extends Component {
               </div>
             </div>
           </div>
+          <a
+            href={routeMap.rateYourDay}
+            className={commonStyle.primaryButton}
+          >
+            Add Review
+          </a>
         </div>
       </div>
     );
