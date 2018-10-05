@@ -18,3 +18,7 @@ $_CONTAINER_HEIGHT: 667 !default;
   padding: 0 remcalc(20) remcalc(20);
   box-shadow: 0 6px 20px 0 rgba($black, .1);
 }
+
+.flexContainer {
+  background: red;
+}

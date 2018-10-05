@@ -4,6 +4,7 @@ import { GoogleLogin } from 'react-google-login';
 import { inject, observer } from 'mobx-react';
 import { route } from 'preact-router';
 import routeMap from '../../config/routeMap';
+import classnames from 'classnames';
 
 import style from './login.scss';
 import commonStyle from '../common.scss';
@@ -44,9 +45,10 @@ class Login extends Component {
   }
 
   render () {
+    const appContainerClasses = classnames(commonStyle.appContainer, commonStyle.flexContainer);
     return (
       <div className={commonStyle.mainContainer}>
-        <div className={commonStyle.appContainer}>
+        <div className={appContainerClasses}>
           <GoogleLogin
             clientId="210802808654-con1ug567egbtnkjf70ha0det1qnlfnt.apps.googleusercontent.com"
             buttonText="Login with Google"
