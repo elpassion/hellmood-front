@@ -6,12 +6,13 @@ import { inject, observer } from 'mobx-react';
 @inject('authStore')
 @observer
 class Login extends Component {
+
   handleSuccess = (response) => {
     const tokenID = response.tokenId;
     axios.post(`${process.env.PREACT_APP_API_URL}/api/v1/login`, {
       params: {
-        tokenID
-      }
+        tokenID,
+      },
     })
       .then(response => {
         this.updateToken(response.data.token);
@@ -19,14 +20,14 @@ class Login extends Component {
       .catch(function (error) {
         console.log(error);
       })
-      .then(function () {
+      .then(() => {
+        console.log(this.props.authStore.isAuthenticated);
       });
   };
 
   updateToken = (param) => {
     this.props.authStore.login(param);
   };
-
 
   render () {
     return (
