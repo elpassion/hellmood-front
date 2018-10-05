@@ -44,15 +44,17 @@ class Login extends Component {
 
   render () {
     return (
-      <div className={style.topkek}>
-        <GoogleLogin
-          clientId="210802808654-con1ug567egbtnkjf70ha0det1qnlfnt.apps.googleusercontent.com"
-          buttonText="Login with Google"
-          scope="profile email"
-          className="temp"
-          onSuccess={this.handleSuccess}
-          onFailure={this.handleFailure}
-        />
+      <div className={style.homeWrapper}>
+        <div>
+          <GoogleLogin
+            clientId="210802808654-con1ug567egbtnkjf70ha0det1qnlfnt.apps.googleusercontent.com"
+            buttonText="Login with Google"
+            scope="profile email"
+            className="temp"
+            onSuccess={this.handleSuccess}
+            onFailure={this.handleFailure}
+          />
+        </div>
       </div>
     );
   }
