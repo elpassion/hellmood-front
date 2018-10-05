@@ -1,7 +1,4 @@
-import {
-  observable,
-  action
-} from 'mobx';
+import { observable, action } from 'mobx';
 
 class AuthStore {
   @observable isAuthenticated = false;
