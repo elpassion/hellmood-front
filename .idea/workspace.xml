@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e211208f-7c24-494e-aa43-1fd960fc62c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/icon-more.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/logotype.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/settings-icon.svg" afterDir="false" />
+    <list default="true" id="e211208f-7c24-494e-aa43-1fd960fc62c9" name="Default Changelist" comment="Basic Assets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/login/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/login/login.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,9 +66,9 @@
           <entry key="editorconfig" value="1" />
           <entry key="env" value="8" />
           <entry key="eslintrc" value="1" />
-          <entry key="js" value="67" />
+          <entry key="js" value="68" />
           <entry key="json" value="5" />
-          <entry key="scss" value="10" />
+          <entry key="scss" value="12" />
           <entry key="stylelintrc" value="1" />
           <entry key="svg" value="6" />
         </counts>
@@ -80,9 +79,9 @@
           <entry key="CSS" value="1" />
           <entry key="ESLint" value="1" />
           <entry key="JSON" value="8" />
-          <entry key="JavaScript" value="67" />
+          <entry key="JavaScript" value="68" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="SCSS" value="10" />
+          <entry key="SCSS" value="12" />
           <entry key="SVG" value="6" />
         </counts>
       </usages-collector>
@@ -90,19 +89,19 @@
         <counts>
           <entry key="babelrc" value="1" />
           <entry key="env" value="26" />
-          <entry key="js" value="2278" />
+          <entry key="js" value="2412" />
           <entry key="json" value="10" />
-          <entry key="scss" value="5" />
-          <entry key="txt" value="76" />
+          <entry key="scss" value="31" />
+          <entry key="txt" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="26" />
           <entry key="JSON" value="11" />
-          <entry key="JavaScript" value="2278" />
-          <entry key="PLAIN_TEXT" value="76" />
-          <entry key="SCSS" value="5" />
+          <entry key="JavaScript" value="2412" />
+          <entry key="PLAIN_TEXT" value="89" />
+          <entry key="SCSS" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -169,9 +168,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/login/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#342#768#0" />
+                <element signature="e#715#738#0" />
+                <element signature="n#!!block;n#componentDidMount#0;n#Login#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/assets/logotype.svg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/src/routes/login/login.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -220,13 +238,14 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/components/ProtectedRoute/index.js" />
         <option value="$PROJECT_DIR$/src/config/routeMap.js" />
-        <option value="$PROJECT_DIR$/src/routes/login/index.js" />
         <option value="$PROJECT_DIR$/src/routes/home/index.js" />
         <option value="$PROJECT_DIR$/src/routes/mood/index.js" />
         <option value="$PROJECT_DIR$/src/store/auth.js" />
         <option value="$PROJECT_DIR$/src/assets/icon-more.svg" />
         <option value="$PROJECT_DIR$/src/assets/settings-icon.svg" />
         <option value="$PROJECT_DIR$/src/assets/logotype.svg" />
+        <option value="$PROJECT_DIR$/src/routes/login/index.js" />
+        <option value="$PROJECT_DIR$/src/routes/login/login.scss" />
       </list>
     </option>
   </component>
@@ -271,7 +290,14 @@
               <item name="hackathon" type="b2602c69:ProjectViewProjectNode" />
               <item name="hackathon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hackathon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hackathon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -563,11 +589,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538728471984</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Basic Assets">
+      <created>1538729636562</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1538729636562</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23870000" />
+    <option name="totallyTimeSpent" value="24404000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -625,7 +658,8 @@
     <MESSAGE value="Token to mobx" />
     <MESSAGE value="auth" />
     <MESSAGE value="Authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Authentication" />
+    <MESSAGE value="Basic Assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic Assets" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.test.js" />
@@ -706,9 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/login/style.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style/partials/_functions.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -785,16 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/login/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/mood/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -824,6 +845,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/logotype.svg">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/login/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#342#768#0" />
+            <element signature="e#715#738#0" />
+            <element signature="n#!!block;n#componentDidMount#0;n#Login#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/login/login.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
