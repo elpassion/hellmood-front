@@ -5,14 +5,14 @@ import { route } from 'preact-router';
 @inject('authStore')
 export default class ProtectedRoute extends Component {
   componentWillMount () {
-    const { redirectPath, authStore: { user } } = this.props;
+    const { redirectPath, authStore: { isAuthenticated } } = this.props;
 
-    if (!user) route(redirectPath || '/');
+    if (!isAuthenticated) route(redirectPath || '/');
   }
 
   render ({ component: Route, ...props }) {
-    const { authStore: { user } } = this.props;
+    const { authStore: { isAuthenticated } } = this.props;
 
-    return user && <Route {...props} />;
+    return isAuthenticated && <Route {...props} />;
   }
 }

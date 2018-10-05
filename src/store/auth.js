@@ -11,6 +11,7 @@ class AuthStore {
     this.token = token;
     if (token) {
       this.isAuthenticated = true;
+
     }
   }
 }
