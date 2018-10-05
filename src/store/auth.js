@@ -1,7 +1,6 @@
-import {
-  observable,
-  action
-} from 'mobx';
+import { observable, action } from 'mobx';
+import { route } from 'preact-router';
+import routeMap from '../config/routeMap';
 
 class AuthStore {
   @observable isAuthenticated = false;
@@ -11,6 +10,7 @@ class AuthStore {
     this.token = token;
     if (token) {
       this.isAuthenticated = true;
+      route(routeMap.home);
     }
   }
 }
