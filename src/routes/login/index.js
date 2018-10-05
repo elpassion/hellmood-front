@@ -2,6 +2,8 @@ import { Component } from 'preact';
 import axios from 'axios';
 import { GoogleLogin } from 'react-google-login';
 import { inject, observer } from 'mobx-react';
+import { route } from 'preact-router';
+import routeMap from '../utils/routeMap';
 
 @inject('authStore')
 @observer
@@ -22,6 +24,7 @@ class Login extends Component {
       })
       .then(() => {
         console.log(this.props.authStore.isAuthenticated);
+        route(routeMap.home)
       });
   };
 
