@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Logotype = props => (
   <svg width={109} height={42} {...props}>
     <g fill='none' fillRule='evenodd'>

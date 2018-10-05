@@ -1,0 +1,28 @@
+.rateMoodLogotype {
+  height: remcalc(50);
+  margin: 0 0 remcalc(32);
+}
+
+.rateYourMoodForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  & > button {
+    margin: auto 0 0 0;
+  }
+}
+
+.rateYourMoodHeader {
+  margin: 0 0 remcalc(24);
+  text-align: center;
+  font-size: remcalc(16);
+  font-weight: $bold;
+  color: $raven;
+}
+
+.chooseMoodContainer {
+  text-align: center;
+  margin: 0 0 remcalc(36);
+}
