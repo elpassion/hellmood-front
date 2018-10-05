@@ -20,5 +20,6 @@ $_CONTAINER_HEIGHT: 667 !default;
 }
 
 .flexContainer {
-  background: red;
+  display: flex;
+  flex-direction: column;
 }
